@@ -54,4 +54,33 @@
 
     </LinearLayout>
 
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/phone_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                android:inputType="phone"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView android:id="@+id/phone_button"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                   android:background="?selectableItemBackgroundBorderless"
+                   android:src="@drawable/ic_local_phone_black_24dp"/>
+
+    </LinearLayout>
+
 </LinearLayout>

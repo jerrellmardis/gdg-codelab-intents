@@ -3,4 +3,6 @@
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
     <string name="email_error_text">You must provide a valid email address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_error_text">You must provide a valid phone number</string>
 </resources>
