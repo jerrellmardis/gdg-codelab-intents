@@ -83,4 +83,40 @@
 
     </LinearLayout>
 
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/address_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:inputType="textPostalAddress"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView android:id="@+id/maps_button"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                   android:background="?selectableItemBackgroundBorderless"
+                   android:src="@drawable/ic_map_black_24dp"/>
+
+        <ImageView android:id="@+id/navigation_button"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                   android:background="?selectableItemBackgroundBorderless"
+                   android:src="@drawable/ic_navigation_black_24dp"/>
+
+    </LinearLayout>
+
 </LinearLayout>

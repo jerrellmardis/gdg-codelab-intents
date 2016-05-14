@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setupEmailListeners();
 
         setupPhoneListeners();
+
+        setupAddressListeners();
     }
 
     private void setupEmailListeners() {
@@ -69,6 +71,64 @@ public class MainActivity extends AppCompatActivity {
                         // using this action doesn't require any additional permissions unlike Intent.ACTION_CALL
                         Intent intent = new Intent(Intent.ACTION_DIAL);
                         intent.setData(Uri.parse("tel:" + phone.getText()));
+                        startActivity(intent);
+                    }
+                }
+            });
+        }
+    }
+
+    private void setupAddressListeners() {
+        final EditText address = (EditText) findViewById(R.id.address_edit_text);
+        final View mapsButton = findViewById(R.id.maps_button);
+        final View navigationButton = findViewById(R.id.navigation_button);
+
+        if (mapsButton != null && address != null) {
+            // set up a click listener to open Google Maps app when an address is provided
+            mapsButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (TextUtils.isEmpty(address.getText())) {
+                        address.setError(getString(R.string.address_error_text));
+                    } else {
+                        address.setError(null);
+
+                        // set up the URI with the address from the EditText
+                        Uri uri = Uri.parse("geo:0,0?q=" + address.getText());
+
+                        // create the Intent with the action ACTION_VIEW and URI created above
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+                        // explicitly set the package
+                        intent.setPackage("com.google.android.apps.maps");
+
+                        // start the activity
+                        startActivity(intent);
+                    }
+                }
+            });
+        }
+
+        if (navigationButton != null && address != null) {
+            // set up a click listener to open Google Maps in navigation mode
+            navigationButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (TextUtils.isEmpty(address.getText())) {
+                        address.setError(getString(R.string.address_error_text));
+                    } else {
+                        address.setError(null);
+
+                        // set up the URI with the address from the EditText
+                        Uri uri = Uri.parse("google.navigation:q=" + address.getText());
+
+                        // create the Intent with the action ACTION_VIEW and URI created above
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+                        // explicitly set the package
+                        intent.setPackage("com.google.android.apps.maps");
+
+                        // start the activity
                         startActivity(intent);
                     }
                 }
