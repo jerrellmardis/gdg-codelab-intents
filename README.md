@@ -1,4 +1,4 @@
-# GDG Intents "Contacts Manager" Codelab
+# Android Intents "Contacts Manager" Codelab
 
 *Updated May 2016*
 
@@ -10,7 +10,7 @@ The original github repository for this codelab is here:
 
 ##Table of Contents
 
-- [Android Intents "Contacts Manager" CodeLab](#gdg-intents-contacts-manager-codelab)
+- [Android Intents "Contacts Manager" CodeLab](#android-intents-contacts-manager-codelab)
     - [Codelab Requirements](#codelab-requirements)
     - [Introduction](#introduction)
         - [The Contacts Manager application](#the-contacts-manager-application)
@@ -18,7 +18,7 @@ The original github repository for this codelab is here:
     - [Step 1 - Implement launching an Email application](#step-1---implement-launching-an-email-application)
     - [Step 2 - Implement launching a Phone application](#step-2---implement-launching-a-phone-application)
     - [Step 3 - Implement launching Google Maps](#step-3---implement-launching-google-maps)
-    - [Step 4 - Extra Credit: Try saving the contact to your contacts app](#step-4---extra-credit:-try-saving-the-contact-to-your-contacts-app)
+    - [Step 4 - Extra Credit: Try saving the contact to your contacts app](#step-4---extra-credit-try-saving-the-contact-to-your-contacts-app)
     - [Appendix - More on Intents and Intent Filters](#appendix---more-on-intents-and-intent-filters)
 
 ## Codelab Requirements
